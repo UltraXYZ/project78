@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            Family Book
+        </title>
+    </head>
+    <body>
+        
+            <h1>
+                My Family Book
+            </h1>
+
+            <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" style="width: 350px; height: 400px;" id="family_member_image">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();">Next</button>
+
+            <style>
+            body{
+                text-align: center;
+            }
+            </style>
+
+
+            <script>
+                          var images = ["https://i.postimg.cc/MKdhy06Z/family.jpg","https://i.postimg.cc/wjMnFtMX/father.jpg" , "https://i.postimg.cc/5ymDKL83/bro.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png"];
+            var names = ["Family Book","Dad", "Neelesh", "Mom", "Harshit" ];
+            var i = 0;
+            function update()
+            {
+                
+                var numbers_of_family_member_in_array = 4
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                i++;
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+
+            </script>
+        
+    </body>
+</html>
